@@ -458,6 +458,7 @@ li {
 
 
 
+
 #fh5co-hero .flexslider .slides {
   position: relative;
   overflow: hidden;
@@ -466,7 +467,7 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
-  min-height: 822px;
+  min-height: 644px;
   position: relative;
 }
 @media (max-width: 768px) {
@@ -660,6 +661,9 @@ li {
   border: 1px solid #aaa;
   border-radius: 3px;
 }
+
+
+
 
 .contact-form textarea {
   width: 100%;

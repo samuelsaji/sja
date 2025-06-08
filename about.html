@@ -60,6 +60,15 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+		<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!-- FlexSlider JS and CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+
+
+
 	</head>
 	<body>
 		
@@ -102,81 +111,24 @@
 	</nav>
 	<div class="container-wrap">
 
-		<aside id="fh5co-hero" style="min-height: 882;">
-			<div class="flexslider">
-				<ul class="slides">
-			   	<li style="background-image: url(images/abt-banner1.png);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 slider-text">
-				   				
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/abt-banner2.png);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 col-md-push-3 slider-text">
-				   				
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/abt-banner3.png);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container-fluids">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 slider-text">
-				   				
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/abt-banner4.png);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 col-md-push-3 slider-text">
-				   				
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-				   <li style="background-image: url(images/abt-banner5.png);">
-					<div class="overlay-gradient"></div>
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-6 col-md-offset-3 col-md-push-3 slider-text">
-								
-							</div>
-						</div>
-					</div>
-				</li>	   	
-			  	</ul>
-		  	</div>
-		</aside>
-		<!--<aside id="fh5co-hero">
-			<div class="flexslider">
-				<ul class="slides">
-			   	<li style="background-image: url(images/About\ banner.jpg);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container-fluids">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 slider-text slider-text-bg">
-				   				<div class="slider-text-inner text-center">
-				   					<h1>About</h1>
-										<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>		   	
-			  	</ul>
-		  	</div>
-		</aside>	-->	
+	<aside id="fh5co-hero">
+  <div class="flexslider">
+    <ul class="slides">
+      <li style="background-image: url(images/banners/abt-banner1.png);" data-caption="we see every design as a sensitive response to its context."></li>
+      <li style="background-image: url(images/banners/abt-banner2.png);" data-caption="believe in creating architecture that is rooted and has a sense of place."></li>
+      <li style="background-image: url(images/banners/abt-banner3.png);" data-caption="believe there are things money can't buy."></li>
+      <li style="background-image: url(images/banners/abt-banner4.png);" data-caption="places that celebrate life and the nuances that define the essence of existence."></li>
+      <li style="background-image: url(images/banners/abt-banner5.png);" data-caption="acknowledge the effort of every participant who can contribute in this process."></li>
+      <li style="background-image: url(images/banners/abt-banner6.png);" data-caption="understand building as a process than a product."></li>
+    </ul>
+  </div>
+
+  <!-- Caption container -->
+  <div id="slider-caption" class="text-center" style="margin-top: 20px; font-size: 18px; color: #333;"></div>
+</aside>
+
+
+		
 		<div id="fh5co-about">
 			<div class="row animate-box">
 				<div class="about-desc" style=" margin-left: 20px; margin-right: 20px;">
@@ -299,6 +251,30 @@
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+		<script>
+  $(document).ready(function() {
+    // Initialize Flexslider
+    $('.flexslider').flexslider({
+      animation: "fade",
+      slideshowSpeed: 4000,
+      animationSpeed: 600,
+      start: function(slider) {
+        // Set initial caption
+        var caption = slider.slides.eq(slider.currentSlide).data('caption');
+        $('#slider-caption').text(caption);
+      },
+      after: function(slider) {
+        // Update caption on slide change
+        var caption = slider.slides.eq(slider.currentSlide).data('caption');
+        $('#slider-caption').text(caption);
+      }
+    });
+  });
+</script>
+
+
+
 
 	</body>
 </html>
