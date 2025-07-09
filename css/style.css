@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -11,7 +13,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.7;
@@ -27,6 +29,8 @@ body {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 .offcanvas #page {
   overflow: hidden;
@@ -64,7 +68,13 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+
+.font-changer{
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
 }
@@ -119,7 +129,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-left: -17px;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 @media only screen and (max-width: 768px) {
   .fh5co-nav #fh5co-logo{
@@ -146,7 +156,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 5px 0 0 0;
 }
 .fh5co-nav ul li {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -220,7 +230,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: 0px;
   margin-top: -14px;
   
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   
   letter-spacing: 2px;
@@ -256,7 +266,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: 0;
 }
 .logofont{
-  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+  font-family: 'Roboto', sans-serif;
 }
 .fh5co-nav ul li.has-dropdown .dropdown li a {
   padding: 2px 0;
@@ -410,7 +420,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .section h2 {
   font-size: 18px;
   margin-bottom: 10px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -537,7 +547,7 @@ li {
   margin: 0;
   padding: 0;
   color: black;
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h1 {
   margin-bottom: 20px;
@@ -608,7 +618,9 @@ li {
   clear: both;
   padding-top: 22px;
   padding-left: 22px;
-  padding-right: 22px
+  padding-right: 22px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   
 
 }
@@ -700,7 +712,7 @@ li {
 }
 .services h3 {
   font-size: 13px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -823,7 +835,7 @@ li {
   width: 100%;
   font-weight: 400;
   margin-bottom: .3em;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .fh5co-counters .fh5co-counter-label {
   font-size: 12px;
@@ -831,7 +843,7 @@ li {
   display: block;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 600;
   color: gray;
 }
@@ -908,7 +920,7 @@ li {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .fh5co-blog .blog-text h3 a {
   color: black;
@@ -984,7 +996,7 @@ li {
 }
 .blog-flex .featured-blog .desc-t h3 {
   font-weight: 700;
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 30px;
   margin-bottom: 10px;
   line-height: 40px;
@@ -1007,7 +1019,7 @@ li {
   letter-spacing: 2px;
   font-weight: 600;
   font-size: 14px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: white;
   border: 1px solid red;
   padding: 10px 15px;
@@ -1041,7 +1053,7 @@ li {
 }
 .blog-flex .blog-entry .blog-post .desc h3 {
   font-weight: 300;
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 30px;
   margin-bottom: 10px;
@@ -1116,7 +1128,7 @@ input[type="text"] {
   margin-bottom: 30px;
 }
 .form-group .btn-modify {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -1161,7 +1173,7 @@ input[type="text"] {
   margin-bottom: 20px;
   line-height: 1.5;
   font-weight: 700;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #000;
@@ -1484,7 +1496,7 @@ input[type="text"] {
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
   -webkit-border-radius: 1px;
@@ -1688,6 +1700,7 @@ input[type="text"] {
 }
 .vijayalakshmi{
   /*padding-top: 218px;*/
+
 }
 
 .fh5co-project-detail .fh5co-project-title {
