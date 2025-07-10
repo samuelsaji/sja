@@ -117,6 +117,7 @@
   <div class="flexslider">
     <ul class="slides">
 
+<<<<<<< HEAD
       <!-- Slide 1 -->
       <li>
 		<div class="container-wrap">
@@ -176,6 +177,11 @@
 
     </ul>
  
+=======
+  <!-- Caption container -->
+    <div id="slider-caption" class="text-center" style="margin-top: 20px; font-size: 18px; color: #333;"></div>
+
+>>>>>>> 26b6a83bce9384af996d33c86d2d4f755f026b8f
 </aside>
 
 
@@ -305,26 +311,26 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-		<script>
-  $(document).ready(function() {
-    // Initialize Flexslider
+	<script>
+  $(window).on('load', function () {
     $('.flexslider').flexslider({
-      animation: "fade",
+      animation: "slide",
       slideshowSpeed: 4000,
       animationSpeed: 600,
-      start: function(slider) {
-        // Set initial caption
-        var caption = slider.slides.eq(slider.currentSlide).data('caption');
+      start: function (slider) {
+        var caption = $(slider.slides[slider.currentSlide]).data('caption');
         $('#slider-caption').text(caption);
       },
-      after: function(slider) {
-        // Update caption on slide change
-        var caption = slider.slides.eq(slider.currentSlide).data('caption');
-        $('#slider-caption').text(caption);
+      after: function (slider) {
+        var caption = $(slider.slides[slider.currentSlide]).data('caption');
+        $('#slider-caption').fadeOut(200, function () {
+          $(this).text(caption).fadeIn(400);
+        });
       }
     });
   });
 </script>
+
 
 
 
