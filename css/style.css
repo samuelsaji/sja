@@ -464,38 +464,128 @@ li {
   border: none;
   z-index: 1;
   margin-bottom: 0;
+  
 }
 
 
 
+.slide-container {
+  text-align: center;
+  padding: 20px 15px; /* Added horizontal padding for better mobile spacing */
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.slide-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  max-width: 100%; /* Ensure image never overflows */
+}
+
+.slide-caption {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #444;
+  line-height: 2;
+  padding-top: 20px;
+  margin-bottom: 100px;
+  padding: 0 15px; /* Added horizontal padding for better readability */
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .slide-container {
+    padding: 15px 20px; /* Increased horizontal padding for tablets */
+  }
+  
+  .slide-caption {
+    font-size: 18px; /* Slightly larger than 1rem for better readability */
+    margin-top: 20px;
+    margin-bottom: 60px; /* Reduced bottom margin */
+    padding: 0 10px;
+  }
+
+  .slide-img {
+    border-radius: 12px; /* Slightly larger radius for tablets */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .slide-container {
+    padding: 10px 15px;
+  }
+  
+  .slide-caption {
+    font-size: 16px; /* Better than 0.95rem for readability */
+    margin-top: 15px;
+    margin-bottom: 40px;
+    line-height: 1.6; /* Slightly tighter line height for mobile */
+    padding: 0 5px;
+  }
+
+  .slide-img {
+    border-radius: 8px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .slide-container {
+    padding: 30px 0; /* More padding on large screens */
+  }
+  
+  .slide-caption {
+    font-size: 22px; /* Slightly larger for large screens */
+    margin-bottom: 120px;
+  }
+}
 
 #fh5co-hero .flexslider .slides {
-  position: relative;
+  border-radius: 20px;
   overflow: hidden;
 }
-#fh5co-hero .flexslider .slides li {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
-  min-height: 644px;
+
+/* Base flexslider container fixes */
+#fh5co-hero .flexslider {
+  margin: 0 auto;
+  max-width: 100%;
   position: relative;
 }
-@media (max-width: 768px) {
-  #fh5co-hero .flexslider .slides li {
-   
-    background-size: contain; /* Ensure the full image is visible */
-    background-position: top;
-    height: 279px;
-    min-height: 33vh;
 
-     
-  }
+#fh5co-hero .flexslider .flex-viewport {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 @media (max-width: 767px) {
   #fh5co-hero {
-      min-height: auto; /* Reset height for mobile devices */
-     
+    min-height: auto;
+    padding: 0 15px; /* Add horizontal padding for mobile */
+  }
+  
+  /* Fix flexslider alignment on mobile */
+  #fh5co-hero .flexslider {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  #fh5co-hero .flexslider .slides {
+    border-radius: 15px; /* Slightly smaller radius for mobile */
+    margin: 0;
+    width: 100%;
+  }
+  
+  #fh5co-hero .flexslider .flex-viewport {
+    margin: 0;
+    padding: 0;
+    overflow: visible; /* Allow content to be visible */
   }
 }
 
@@ -507,10 +597,30 @@ li {
   width: auto;
 }
 
+/* Mobile navigation adjustments */
+@media (max-width: 767px) {
+  #fh5co-hero .flexslider .flex-control-nav {
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    float: none;
+    text-align: center;
+  }
+}
+
 #fh5co-hero .flexslider .flex-control-nav li {
   display: block;
   margin-bottom: 10px;
 }
+
+@media (max-width: 767px) {
+  #fh5co-hero .flexslider .flex-control-nav li {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+}
+
 #fh5co-hero .flexslider .flex-control-nav li a {
   background: rgba(182, 182, 182, 0.8);
   box-shadow: none;
@@ -518,74 +628,115 @@ li {
   height: 12px;
   cursor: pointer;
 }
+
 #fh5co-hero .flexslider .flex-control-nav li a.flex-active {
   cursor: pointer;
   background: transparent;
   border: 2px solid #6e6e6e;
 }
+
 #fh5co-hero .flexslider .flex-direction-nav {
   display: none;
 }
+
 #fh5co-hero .flexslider .slider-text {
   display: table;
   opacity: 0;
   min-height: 500px;
   z-index: 9;
+  width: 100%;
 }
+
+@media (max-width: 767px) {
+  #fh5co-hero .flexslider .slider-text {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 #fh5co-hero .flexslider .slider-text > .slider-text-inner {
   display: table-cell;
   vertical-align: middle;
   min-height: 700px;
   padding: 2em;
 }
+
 @media screen and (max-width: 768px) {
   #fh5co-hero .flexslider .slider-text > .slider-text-inner {
     text-align: center;
+    display: block;
+    min-height: auto;
+    padding: 1.5em 1em;
   }
 }
-#fh5co-hero .flexslider .slider-text > .slider-text-inner h1, #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
+
+#fh5co-hero .flexslider .slider-text > .slider-text-inner h1, 
+#fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
   margin: 0;
   padding: 0;
   color: black;
   font-family: 'Roboto', sans-serif;
 }
+
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h1 {
   margin-bottom: 20px;
   font-size: 30px;
   line-height: 1.3;
   font-weight: 300;
 }
+
 @media screen and (max-width: 768px) {
   #fh5co-hero .flexslider .slider-text > .slider-text-inner h1 {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 15px;
   }
 }
+
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 a {
   color: rgba(80, 80, 80, 0.8);
- border-bottom: 1px solid rgba(20, 20, 20, 0.7); 
+  border-bottom: 1px solid rgba(20, 20, 20, 0.7); 
 }
+
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .heading-section {
   font-size: 50px;
 }
+
 @media screen and (max-width: 768px) {
   #fh5co-hero .flexslider .slider-text > .slider-text-inner .heading-section {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
-#fh5co-hero .flexslider .slider-text > .slider-text-inner s
-.fh5co-lead {
+
+#fh5co-hero .flexslider .slider-text > .slider-text-inner .fh5co-lead {
   font-size: 20px;
   color: #fff;
 }
-#fh5co-hero .flexslider .slider-text > .slider-text-inner s
-.fh5co-lead .icon-heart {
+
+@media screen and (max-width: 768px) {
+  #fh5co-hero .flexslider .slider-text > .slider-text-inner .fh5co-lead {
+    font-size: 18px;
+  }
+}
+
+#fh5co-hero .flexslider .slider-text > .slider-text-inner .fh5co-lead .icon-heart {
   color: #d9534f;
 }
+
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .btn {
   font-size: 12px;
   text-transform: uppercase;
@@ -594,12 +745,17 @@ li {
   padding: 20px 30px !important;
   border: none;
 }
+
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn {
   background: #fff;
 }
+
 @media screen and (max-width: 768px) {
   #fh5co-hero .flexslider .slider-text > .slider-text-inner .btn {
-    width: 100%;
+    width: 90%;
+    max-width: 300px;
+    padding: 15px 20px !important;
+    font-size: 11px;
   }
 }
 
@@ -607,7 +763,61 @@ li {
   background: #fafafa;
 }
 
-#fh5co-about,
+#fh5co-about {
+  margin-top: -80px;
+  padding-left: 22px;
+  padding-right: 22px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+  #fh5co-about {
+    margin-top: -60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  #fh5co-about {
+    margin-top: -40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Small mobile styles */
+@media screen and (max-width: 320px) {
+  #fh5co-about {
+    margin-top: -30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Large desktop styles */
+@media screen and (min-width: 1200px) {
+  #fh5co-about {
+    margin-top: -90px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* Extra large screens */
+@media screen and (min-width: 1600px) {
+  #fh5co-about {
+    margin-top: -70px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
+
 #fh5co-services,
 #fh5co-contact,
 #fh5co-work,
@@ -635,7 +845,7 @@ li {
 }
 
 @media screen and (max-width: 768px) {
-  #fh5co-about,
+  
   #fh5co-services,
   #fh5co-contact,
   #fh5co-work,
