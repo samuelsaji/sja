@@ -258,3 +258,35 @@
 	
 
 }());
+
+const thumbnails = document.querySelectorAll('.thumbnail-box');
+const preview = document.querySelector('.main-image img');
+
+thumbnails.forEach(thumbnail => {
+  const img = thumbnail.querySelector('img');
+
+  // Hover to preview
+  thumbnail.addEventListener('mouseenter', () => {
+    preview.src = img.src;
+  });
+
+
+
+  // Click to navigate
+  thumbnail.addEventListener('click', () => {
+    const targetPage = thumbnail.getAttribute('data-link');
+    if (targetPage) {
+      window.location.href = targetPage;
+    }
+  });
+});
+function toggleDropdown(id) {
+    const dropdown = document.getElementById(id);
+    const trigger = dropdown.previousElementSibling; // gets the corresponding .dropdown-trigger
+
+    dropdown.classList.toggle('active');
+    trigger.classList.toggle('active');
+  }
+
+  
+  
