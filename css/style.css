@@ -568,6 +568,7 @@ li {
 #fh5co-hero .flexslider .slides {
   border-radius: 20px;
   overflow: hidden;
+  margin-top: -75px;
 }
 
 /* Base flexslider container fixes */
@@ -634,7 +635,7 @@ li {
 
   .main-image,
   .slides img {
-    width: 100%;
+    width: auto;
     height: auto;
     display: block;
     margin: 0;
@@ -2267,23 +2268,28 @@ input[type="text"] {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 95%;
   height: 400px; /* Desktop height */
   border-radius: 10px;
   margin-bottom: 20px;
+  transform: translate(28px, -50px);
 }
 
 /* Responsive height for tablets */
 @media (max-width: 768px) {
   .project-cover {
+    width: 98%;
     height: 300px;
+    transform: translate(10px, -30px);
   }
 }
 
-/* Responsive height for phones */
+/* Phones */
 @media (max-width: 480px) {
   .project-cover {
+    width: 100%;
     height: 200px;
+    transform: translate(0, -10px);
   }
 }
 
@@ -2291,8 +2297,8 @@ input[type="text"] {
   text-align: center;
   padding-bottom: 10px;
   position: absolute;
-   bottom: 80px;
-  right: 228px;
+   bottom: 100px;
+  right: 60px;
 }
 
 .seetheunseen span {
@@ -2331,9 +2337,10 @@ input[type="text"] {
 
 .space{
   width: 100%; ;
-  height: 70px;
+  height: 80px;
   background-color: #f3f3f3; /* Light gray background */
 }
+
 
 @media (max-width: 768px) {
   .space {
@@ -2343,6 +2350,88 @@ input[type="text"] {
 
 @media (max-width: 480px) {
   .space {
+    height: 50px; /* even smaller height for small mobile screens */
+  }
+}
+
+.project-cover1{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 97% !important;
+  height: 400px; /* Desktop height */
+  border-radius: 10px;
+  margin-bottom: 200px;
+ transform: translate(18px, 30px);
+}
+
+/* Tablet styles (768px and below) */
+@media screen and (max-width: 768px) {
+  .project-cover1 {
+    width: 95% !important;
+    height: 300px;
+    margin-bottom: 150px;
+    transform: translate(10px, 20px);
+    border-radius: 8px;
+  }
+}
+
+/* Mobile styles (480px and below) */
+@media screen and (max-width: 480px) {
+  .project-cover1 {
+    width: 97% !important;
+    height: 250px;
+    margin-bottom: 100px;
+    transform: translate(5px, 15px);
+    border-radius: 6px;
+  }
+}
+
+/* Small mobile styles (320px and below) */
+@media screen and (max-width: 320px) {
+  .project-cover1 {
+    width: 95% !important;
+    height: 200px;
+    margin-bottom: 80px;
+    transform: translate(0px, 10px);
+    border-radius: 5px;
+  }
+}
+
+/* Large desktop styles (1200px and above) */
+@media screen and (min-width: 1200px) {
+  .project-cover1 {
+    width: 97% !important;
+    height: 450px;
+    margin-bottom: 250px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .project-cover1 {
+    width: 80% !important;
+    height: 400px !important;
+    margin-bottom: 200px !important;
+    transform: translate(18px, 30px) !important;
+    border-radius: 10px !important;
+  }
+}
+
+
+.space1{
+  width: 100%; ;
+  height: 10px;
+  background-color: #f3f3f3; /* Light gray background */
+}
+
+
+@media (max-width: 768px) {
+  .space1 {
+    height: 70px; /* reduce height on tablets/mobiles */
+  }
+}
+
+@media (max-width: 480px) {
+  .space1 {
     height: 50px; /* even smaller height for small mobile screens */
   }
 }
