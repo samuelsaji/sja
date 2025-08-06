@@ -2039,7 +2039,7 @@ input[type="text"] {
   
   overflow: hidden;
     transform: translateX(-25px);
-
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   
 }
 
@@ -2374,6 +2374,17 @@ input[type="text"] {
   background-color: #f3f3f3; /* Light gray background */
 }
 
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .space {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .space {
+    height: 70px; /* reduce height on tablets/mobiles */
+  }
+}
 
 @media (max-width: 768px) {
   .space {
