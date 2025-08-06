@@ -290,5 +290,161 @@ function toggleDropdown(id) {
   }
 */ 
 
+
+
+
+
+// Data mapping for images and their corresponding titles
+const imageData = {
+    'munnar-resort-thumbnails-20': {
+        src: '\images\munnar-resort\thumbnails-20.png',
+        title: 'Munnar Resort - A luxurious mountain retreat'
+    },
+    'asset3': {
+        src: '\images\Asset3.png',
+        title: 'Asset 3 '
+    },
+    'stone-house-thumbnails-16': {
+        src: '\images\stone-house\thumbnails-16.png',
+        title: 'Stone House - Natural stone architecture'
+    },
+    'asset6': {
+        src: '\images\Asset6.png',
+        title: 'Asset 6 - Residential project'
+    },
+    'lostschool-thumbnails-23': {
+        src: '\images\lostschool\thumbnails-23.png',
+        title: 'Lost School - Educational project'
+    },
+    'paul-mathew-thumbnails-19': {
+        src: '\images\paul-mathew\thumbnails-19.png',
+        title: 'Paul Mathew Residence'
+    },
+    'thumbnail-17': {
+        src: '\images\thumbnail-17.png',
+        title: 'Vimal Lakshmi - Residential project'
+    },
+    'asset9': {
+        src: '\images\Asset9.png',
+        title: 'Asset 9 - Innovative design concept'
+    }
+};
+
+// Store the original title
+let originalTitle = '';
+
+// Function to update main image title
+function updateMainImageTitle(imageKey) {
+    const data = imageData[imageKey];
+    if (data) {
+        const mainTitle = document.querySelector('.main-image-title');
+        if (mainTitle) {
+            mainTitle.textContent = data.title;
+        }
+    }
+}
+
+// Function to restore original title
+function restoreOriginalTitle() {
+    const mainTitle = document.querySelector('.main-image-title');
+    if (mainTitle && originalTitle) {
+        mainTitle.textContent = originalTitle;
+    }
+}
+
+// Function to get image key from src
+function getImageKey(src) {
+    // Create a key based on the path and filename
+    if (src.includes('munnar-resort')) {
+        return 'munnar-resort-thumbnails-20';
+    } else if (src.includes('Asset3')) {
+        return 'asset3';
+    } else if (src.includes('stone-house')) {
+        return 'stone-house-thumbnails-16';
+    } else if (src.includes('Asset6')) {
+        return 'asset6';
+    } else if (src.includes('lostschool')) {
+        return 'lostschool-thumbnails-23';
+    } else if (src.includes('paul-mathew')) {
+        return 'paul-mathew-thumbnails-19';
+    } else if (src.includes('thumbnail-17')) {
+        return 'thumbnail-17';
+    } else if (src.includes('Asset9')) {
+        return 'asset9';
+    }
+    
+    return null;
+}
+
+// Add hover event listeners to all thumbnail boxes
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, setting up hover event listeners');
+    
+    // Store the original title
+    const mainTitle = document.querySelector('.main-image-title');
+    if (mainTitle) {
+        originalTitle = mainTitle.textContent;
+        console.log('Original title stored:', originalTitle);
+    }
+    
+    // Add hover listeners to main thumbnail boxes
+    const thumbnailBoxes = document.querySelectorAll('.thumbnail-box');
+    console.log('Found', thumbnailBoxes.length, 'thumbnail boxes');
+    
+    thumbnailBoxes.forEach((box, index) => {
+        const img = box.querySelector('img');
+        if (img) {
+            // Mouse enter event
+            box.addEventListener('mouseenter', function() {
+                console.log('Mouse entered thumbnail:', index);
+                const imageKey = getImageKey(img.src);
+                if (imageKey) {
+                    updateMainImageTitle(imageKey);
+                }
+            });
+            
+            // Mouse leave event
+            box.addEventListener('mouseleave', function() {
+                console.log('Mouse left thumbnail:', index);
+                restoreOriginalTitle();
+            });
+        }
+    });
+    
+    // Add hover listeners to dropdown thumbnail boxes
+    const dropdownThumbnails = document.querySelectorAll('.dropdown-thumbnails .thumbnail-box');
+    console.log('Found', dropdownThumbnails.length, 'dropdown thumbnail boxes');
+    
+    dropdownThumbnails.forEach((box, index) => {
+        const img = box.querySelector('img');
+        if (img) {
+            // Mouse enter event
+            box.addEventListener('mouseenter', function() {
+                console.log('Mouse entered dropdown thumbnail:', index);
+                const imageKey = getImageKey(img.src);
+                if (imageKey) {
+                    updateMainImageTitle(imageKey);
+                }
+            });
+            
+            // Mouse leave event
+            box.addEventListener('mouseleave', function() {
+                console.log('Mouse left dropdown thumbnail:', index);
+                restoreOriginalTitle();
+            });
+        }
+    });
+});
+
+// Existing dropdown functionality
+function toggleDropdown(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    if (dropdown) {
+        dropdown.classList.toggle('show');
+        console.log('Toggled dropdown:', dropdownId);
+    }
+} 
+
+
   
   
