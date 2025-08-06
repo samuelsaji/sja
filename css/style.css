@@ -499,14 +499,14 @@ li {
 .slide-img {
   width: 100%;
   height: auto;
-  border-radius: 15px;
+ 
   display: block;
   max-width: 100%; /* Ensure image never overflows */
 }
 
 .slide-caption {
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 0.7rem;
   font-weight: 400;
   color: #444;
   line-height: 2;
@@ -522,15 +522,13 @@ li {
   }
   
   .slide-caption {
-    font-size: 18px; /* Slightly larger than 1rem for better readability */
+    font-size: 14px; /* Smaller size for tablets */
     margin-top: 20px;
     margin-bottom: 60px; /* Reduced bottom margin */
     padding: 0 10px;
   }
 
-  .slide-img {
-    border-radius: 12px; /* Slightly larger radius for tablets */
-  }
+ 
 }
 
 /* Mobile styles */
@@ -540,7 +538,7 @@ li {
   }
   
   .slide-caption {
-    font-size: 16px; /* Better than 0.95rem for readability */
+    font-size: 12px; /* Smaller size for mobile */
     margin-top: 15px;
     margin-bottom: 40px;
     line-height: 1.6; /* Slightly tighter line height for mobile */
@@ -559,14 +557,14 @@ li {
   }
   
   .slide-caption {
-    font-size: 22px; /* Slightly larger for large screens */
+    font-size: 16px; /* Smaller size for large screens */
     margin-bottom: 120px;
   }
 }
 
 
 #fh5co-hero .flexslider .slides {
-  border-radius: 20px;
+ 
   overflow: hidden;
   margin-top: -75px;
 }
@@ -599,7 +597,6 @@ li {
   }
   
   #fh5co-hero .flexslider .slides {
-    border-radius: 15px; /* Slightly smaller radius for mobile */
     margin: 0;
     width: 100%;
   }
@@ -2032,7 +2029,7 @@ input[type="text"] {
 .main-image {
   flex: 2.5;
   background-color: white;
-  border-radius: 8px;
+  
   overflow: hidden;
     transform: translateX(-25px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -2047,6 +2044,10 @@ input[type="text"] {
   
 }
 
+.slide-img{
+  border-radius: 0px;
+}
+
 
 
 /* Thumbnail section on the right */
@@ -2054,7 +2055,7 @@ input[type="text"] {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1px;
   overflow-y: auto;
 }
 
@@ -2063,6 +2064,7 @@ input[type="text"] {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: -10px;
 }
 
 .row-thumbnails {
@@ -2074,7 +2076,7 @@ input[type="text"] {
   width: 80px;
   height: 80px;
   background-color: white;
-  border-radius: 4px;
+  
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -2100,17 +2102,20 @@ input[type="text"] {
 
 /* Dropdown trigger styling */
 .dropdown-trigger {
+  width: 75px;
+  height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: linear-gradient(135deg, #fdfdfd, #f2f2f2);
-  padding: 12px 16px;
-  border-radius: 8px;
-  border: 1px solid #ffffff;
+  padding: 8px;
+
+
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 12px 0;
+  flex-shrink: 0;
 }
 
 .dropdown-trigger:hover {
@@ -2119,17 +2124,19 @@ input[type="text"] {
 }
 
 .dropdown-text {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
   color: #2c2c2c;
-  text-align: left;
-  line-height: 1.3;
+  text-align: center;
+  line-height: 1.2;
+  margin: 0;
 }
 
 .dropdown-arrow {
-  font-size: 12px;
+  font-size: 8px;
   color: #a79595;
   transition: transform 0.3s ease;
+  margin-top: 2px;
 }
 
 .dropdown-trigger.active .dropdown-arrow {
@@ -2198,11 +2205,20 @@ input[type="text"] {
     gap: 4px;
   }
   .dropdown-trigger {
-    min-width: 80px;
+    width: 45px;
+    height: 45px;
     font-size: 12px;
-    padding: 8px 8px;
+    padding: 6px;
     margin: 0;                /* remove vertical margin */
     flex-shrink: 0;           /* don't shrink trigger */
+  }
+  .dropdown-text {
+    font-size: 8px;
+    line-height: 1.1;
+  }
+  .dropdown-arrow {
+    font-size: 6px;
+    margin-top: 1px;
   }
   .thumbnail-box,
   .thumbnail-box.small {
@@ -2246,7 +2262,7 @@ input[type="text"] {
     border-radius: 4px;
   }
   .thumbnail-section {
-    gap: 6px;
+    gap: 4px;
   }
   .thumbnail-box,
   .thumbnail-box.small {
@@ -2254,8 +2270,18 @@ input[type="text"] {
     height: 45px;
   }
   .dropdown-trigger {
+    width: 45px;
+    height: 45px;
     font-size: 12px;
-    padding: 8px 10px;
+    padding: 6px;
+  }
+  .dropdown-text {
+    font-size: 8px;
+    line-height: 1.1;
+  }
+  .dropdown-arrow {
+    font-size: 6px;
+    margin-top: 1px;
   }
   .dropdown-thumbnails {
     gap: 4px;
@@ -2270,7 +2296,6 @@ input[type="text"] {
   background-repeat: no-repeat;
   width: 95%;
   height: 400px; /* Desktop height */
-  border-radius: 10px;
   margin-bottom: 20px;
   transform: translate(28px, -50px);
 }
@@ -2295,10 +2320,11 @@ input[type="text"] {
 
 .seetheunseen {
   text-align: center;
+  width: 100%;
   padding-bottom: 10px;
   position: absolute;
    bottom: 100px;
-  right: 60px;
+  right: 113px;
 }
 
 .seetheunseen span {
@@ -2314,7 +2340,7 @@ input[type="text"] {
 @media (max-width: 768px) {
   .seetheunseen {
     bottom: 80px;
-    right: 40px;
+    right: 300px;
   }
 
   .seetheunseen span {
@@ -2326,7 +2352,7 @@ input[type="text"] {
 @media (max-width: 480px) {
   .seetheunseen {
     bottom: 50px;
-    right: 110px;
+    right: 22rem;
     text-align: right; /* Optional: align to screen edge */
   }
 
@@ -2360,7 +2386,7 @@ input[type="text"] {
   background-repeat: no-repeat;
   width: 97% !important;
   height: 400px; /* Desktop height */
-  border-radius: 10px;
+ 
   margin-bottom: 200px;
  transform: translate(18px, 30px);
 }

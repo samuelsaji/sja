@@ -280,6 +280,7 @@ thumbnails.forEach(thumbnail => {
     }
   });
 });
+/*
 function toggleDropdown(id) {
     const dropdown = document.getElementById(id);
     const trigger = dropdown.previousElementSibling; // gets the corresponding .dropdown-trigger
@@ -287,6 +288,7 @@ function toggleDropdown(id) {
     dropdown.classList.toggle('active');
     trigger.classList.toggle('active');
   }
+*/ 
 
   
   
