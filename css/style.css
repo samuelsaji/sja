@@ -2285,7 +2285,7 @@ input[type="text"] {
     height: 100px;
     font-size: 50px;
     padding: 6px;
-    margin-left: -70px; /* Adjust to center align */
+    margin-left: -30px; /* Adjust to center align */
   }
   .dropdown-text {
     font-size: 12px;
@@ -2298,6 +2298,11 @@ input[type="text"] {
   .dropdown-thumbnails {
     gap: 4px;
     padding: 4px;
+  }
+}
+@media (max-width: 380px) {
+  .dropdown-trigger{
+    margin-left: -20px; 
   }
 }
 
