@@ -298,35 +298,40 @@ function toggleDropdown(id) {
 const imageData = {
     'munnar-resort-thumbnails-20': {
         src: '\images\munnar-resort\thumbnails-20.png',
-        title: 'Munnar Resort - A luxurious mountain retreat'
+        title: 'Munnar Resort, Munnar A 30 key property inside a lush green cover of jungle overlooking the tea estates of Munnar'
     },
     'asset3': {
         src: '\images\Asset3.png',
-        title: 'Asset 3 '
+        title: 'The River Resort, Munnar A 20 key property resort at the banks of a river in Kunjithanni, Munnar  '
     },
     'stone-house-thumbnails-16': {
         src: '\images\stone-house\thumbnails-16.png',
-        title: 'Stone House - Natural stone architecture'
+        title: '  Stone House A weekend hideaway cradled in the warmth of stone'
     },
     'asset6': {
         src: '\images\Asset6.png',
-        title: 'Asset 6 - Residential project'
+        title: 'Vaasta Vagamon A hillside haven where every stone echoes a memory. '
+
+
     },
     'lostschool-thumbnails-23': {
         src: '\images\lostschool\thumbnails-23.png',
-        title: 'Lost School - Educational project'
+        title: 'Lost School Finding Forgotten Spaces and Memories '
     },
     'paul-mathew-thumbnails-19': {
         src: '\images\paul-mathew\thumbnails-19.png',
-        title: 'Paul Mathew Residence'
+        title: 'Space Unfold Apartment interior - Modulating space as a continuous unfold '
     },
     'thumbnail-17': {
         src: '\images\thumbnail-17.png',
-        title: 'Vimal Lakshmi - Residential project'
+        title: 'Vimal Lakshmi Residence A home that upholds and enlivens the neighbourly warmth passed down through generations. '
+
+
     },
     'asset9': {
         src: '\images\Asset9.png',
-        title: 'Asset 9 - Innovative design concept'
+        title: 'Tree Pavilion An outhouse woven into the shelter of the tree canopy.'
+
     }
 };
 
