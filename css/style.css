@@ -2311,10 +2311,10 @@ input[type="text"] {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 95%;
+  width: 100%;
   height: 400px; /* Desktop height */
-  margin-bottom: 20px;
-  transform: translate(28px, -50px);
+  transform: translate(0px, -70px);
+  margin-bottom: -70px;
 }
 
 /* Responsive height for tablets */
@@ -2407,16 +2407,21 @@ input[type="text"] {
     height: 50px; /* even smaller height for small mobile screens */
   }
 }
+.project-cover1 img{
+  border-radius: 0px !important;
+  width: 110% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
 
 .project-cover1{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 97% !important;
+  
   height: 400px; /* Desktop height */
+ transform: translate(0px,0px);
  
-  margin-bottom: 200px;
- transform: translate(18px, 30px);
 }
 
 /* Tablet styles (768px and below) */
